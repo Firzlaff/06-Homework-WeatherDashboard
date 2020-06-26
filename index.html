@@ -1,9 +1,106 @@
-<!--Sudo Code-->
-<!--boiler plate-->
-<!--all links for css and scripts-->
-<!--Search text Input field-->
-<!--Search button-->
-<!--Display to hold searched citys-->
-<!--main display for current city-->
-<!--5 day forecast text box-->
-<!--display boxes for 5 day forecast-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 day forecast</title>
+</head>
+<body>
+    <!-- Div box for jumbotron title-->-->
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Get your 5 day forecast!!</h1>
+        </div>
+    </div>
+    <!--Div for the search box/form, search button, and current city-->
+    <div>
+        <form>
+            <button type="submit"  id="searchBtn">City Search</button>
+
+            <input type="text submit" id="searchBox">
+
+            <ul id="cityList">
+            </ul>
+                <!--Current CIty Info with name, date, temp, windspeed, humidity, and uvindex-->
+            <div class="card" id="cityCurrent">
+                <h4 class="" id="cityName">Current City</h4>
+                <h5 class="" id="date">Date</h5>
+                <div>
+                    <h6 id="temp">Temperature</h6>
+                    <h6 id="speed">Wind Speed</h6>
+                    <h6 id="humidity">Humidity</h6>
+                    <h6 id="uvDex">UVIndex</h6>
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+
+    <!--Div for the 5 day forecast cards-->
+    <div class="container">
+        <div class="card">
+            <div class="card-body" id="dayOne">
+                <p class="" id="dOneDate"></p>
+                <p class="" id="dOneIcon"></p>
+                <p class="" id="dOneTemp"></p>
+                <p class="" id="dOneHum"></p>
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="card-body" id="dayTwo">
+                <p class="" id="dTwoDate"></p>
+                <p class="" id="dTwoIcon"></p>
+                <p class="" id="dTwoTemp"></p>
+                <p class="" id="dTwoHum"></p>
+            </div>
+
+
+        </div>
+
+        <div class="card">
+            <div class="card-body" id="dayThree">
+                <p class="" id="dThreeDate"></p>
+                <p class="" id="dThreeIcon"></p>
+                <p class="" id="dThreeTemp"></p>
+                <p class="" id="dThreeHum"></p>
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="card-body" id="dayFour">
+                <p class="" id="dFourDate"></p>
+                <p class="" id="dFourIcon"></p>
+                <p class="" id="dFourTemp"></p>
+                <p class="" id="dFourHum"></p>
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="card-body" id="dayFive">
+                <p class="" id="dFiveDate"></p>
+                <p class="" id="dFiveIcon"></p>
+                <p class="" id="dFiveTemp"></p>
+                <p class="" id="dFiveHum"></p>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
