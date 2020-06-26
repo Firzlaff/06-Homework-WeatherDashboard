@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>5 day forecast</title>
+    
 </head>
 <body>
     <!-- Div box for jumbotron title-->-->
@@ -17,19 +18,25 @@
         <form>
             <button type="submit"  id="searchBtn">City Search</button>
 
-            <input type="text submit" id="searchBox">
+            <input type="text submit" id="searchValue">
 
             <ul id="cityList">
             </ul>
                 <!--Current CIty Info with name, date, temp, windspeed, humidity, and uvindex-->
             <div class="card" id="cityCurrent">
-                <h4 class="" id="cityName">Current City</h4>
-                <h5 class="" id="date">Date</h5>
+                <h4 class="" >Current City</h4>
+                <h4 id="cityName"></h4>
+                <h5 class="">Date</h5>
+                <h5 id="date"></h5>
                 <div>
-                    <h6 id="temp">Temperature</h6>
-                    <h6 id="speed">Wind Speed</h6>
-                    <h6 id="humidity">Humidity</h6>
-                    <h6 id="uvDex">UVIndex</h6>
+                    <h6>Temperature in</h6>
+                    <h6 id="temp"></h6>
+                    <h6>Wind Speed</h6>
+                    <h6 id="speed"></h6>
+                    <h6>Humidity</h6>
+                    <h6 id="humidity"></h6>
+                    <h6>UVIndex</h6>
+                    <h6 id="uvDex"></h6>
                 </div>
 
             </div>
@@ -92,7 +99,15 @@
         </div>
 
     </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
 
+    <script src="app.js"></script>
 </body>
 </html>
 
