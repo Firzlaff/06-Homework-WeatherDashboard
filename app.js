@@ -1,8 +1,12 @@
 $(document).ready(function () {
 
-// pull search history from local storage and display into the 
-  // const todaysDate = moment().format('LL');
-  // $("#date").append(todaysDate);
+// pull search history from local storage and display into the #cityList ul
+
+// Require moment to pull date info
+// const moment = require('moment');
+
+//   const todaysDate = moment().format('LL');
+//   $("#date").append(todaysDate);
 
 
 // on click function for button to search city
@@ -38,6 +42,31 @@ $(document).ready(function () {
         }).then(function (response) {
           console.log(response);
           $("#uvDex").text(response.current.uvi);
+          // setting text for day 1 
+          $("#dOneDate").text(response.current.uvi);
+          $("#dOneIcon").text(response.current.uvi);
+          $("#dOneTemp").text(response.daily[1].temp.day);
+          $("#dOneHum").text(response.daily[1].humidity);
+          // setting text for day 2 
+          $("#dTwoDate").text(response.current.uvi);
+          $("#dTwoIcon").text(response.current.uvi);
+          $("#dTwoTemp").text(response.daily[2].temp.day);
+          $("#udTwoHum").text(response.daily[2].humidity);
+          // setting text for day 3 
+          $("#dThreeDate").text(response.current.uvi);
+          $("#dThreeIcon").text(response.current.uvi);
+          $("#dThreeTemp").text(response.daily[3].temp.day);
+          $("#dThreeHum").text(response.daily[3].humidity);
+          // setting text for day 4 
+          $("#dFourDate").text(response.current.uvi);
+          $("#dFourIcon").text(response.current.uvi);
+          $("#dFourTemp").text(response.daily[4].temp.day);
+          $("#udFourHum").text(response.daily[4].humidity);
+          // setting text for day 5
+          $("#dFiveDate").text(response.current.uvi);
+          $("#dFiveIcon").text(response.current.uvi);
+          $("#dFiveTemp").text(response.daily[5].temp.day);
+          $("#dFiveHum").text(response.daily[5].humidity);
 
           //add the city name to the search history array 
           // store the array  user stringify to save it to the local storage 
