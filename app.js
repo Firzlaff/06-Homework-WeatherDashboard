@@ -2,11 +2,9 @@ $(document).ready(function () {
 
 // pull search history from local storage and display into the #cityList ul
 
-// Require moment to pull date info
-// const moment = require('moment');
-
-// const todaysDate = moment().format('LL');
-// $("#date").text(todaysDate);
+// variable for Moment for the date information
+const todaysDate = moment().format('LL');
+$("#date").text(todaysDate);
 
 
 // on click function for button to search city
@@ -45,28 +43,28 @@ $(document).ready(function () {
         }).then(function (response) {
           console.log(response);
           $("#uvDex").text(response.current.uvi);
-          // setting data for day 1 
-          $("#dOneDate").text(response.current.uvi);
+          // setting data for day 1 of 5 date, icon, temp, humidity 
+          $("#dOneDate").text(moment.unix(response.daily[0].dt).format("M/D/YY"));
           $("#dOneIcon").text(response.current.uvi);
           $("#dOneTemp").text(response.daily[1].temp.day);
           $("#dOneHum").text(response.daily[1].humidity);
-          // setting data for day 2 
-          $("#dTwoDate").text(response.current.uvi);
+          // setting data for day 2 of 5 date, icon, temp, humidity 
+          $("#dTwoDate").text(moment.unix(response.daily[1].dt).format("M/D/YY"));
           $("#dTwoIcon").text(response.current.uvi);
           $("#dTwoTemp").text(response.daily[2].temp.day);
-          $("#udTwoHum").text(response.daily[2].humidity);
-          // setting data for day 3 
-          $("#dThreeDate").text(response.current.uvi);
+          $("#dTwoHum").text(response.daily[2].humidity);
+          // setting data for day 3 of 5 date, icon, temp, humidity 
+          $("#dThreeDate").text(moment.unix(response.daily[2].dt).format("M/D/YY"));
           $("#dThreeIcon").text(response.current.uvi);
           $("#dThreeTemp").text(response.daily[3].temp.day);
           $("#dThreeHum").text(response.daily[3].humidity);
-          // setting data for day 4 
-          $("#dFourDate").text(response.current.uvi);
+          // setting data for day 4 of 5 date, icon, temp, humidity 
+          $("#dFourDate").text(moment.unix(response.daily[3].dt).format("M/D/YY"));
           $("#dFourIcon").text(response.current.uvi);
           $("#dFourTemp").text(response.daily[4].temp.day);
-          $("#udFourHum").text(response.daily[4].humidity);
-          // setting data for day 5
-          $("#dFiveDate").text(response.current.uvi);
+          $("#dFourHum").text(response.daily[4].humidity);
+          // setting data for day 5 of 5 date, icon, temp, humidity 
+          $("#dFiveDate").text(moment.unix(response.daily[4].dt).format("M/D/YY"));
           $("#dFiveIcon").text(response.current.uvi);
           $("#dFiveTemp").text(response.daily[5].temp.day);
           $("#dFiveHum").text(response.daily[5].humidity);
